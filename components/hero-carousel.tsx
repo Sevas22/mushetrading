@@ -7,9 +7,21 @@ import { Button } from "@/components/ui/button"
 import { useLanguage } from "@/contexts/language-context"
 
 const slides = [
-  { image: "/images/hero-1.jpg" },
-  { image: "/images/hero-2.jpg" },
-  { image: "/images/hero-3.jpg" },
+  {
+    image:
+      "https://images.unsplash.com/photo-1578575437130-527eed3abbec?auto=format&fit=crop&w=1600&q=80",
+    alt: "Shipping containers at a U.S. port terminal",
+  },
+  {
+    image:
+      "https://images.unsplash.com/photo-1565891741441-64926e441838?auto=format&fit=crop&w=1600&q=80",
+    alt: "Food export logistics and warehouse operations",
+  },
+  {
+    image:
+      "https://images.unsplash.com/photo-1586528116311-ad8dd3c8310d?auto=format&fit=crop&w=1600&q=80",
+    alt: "Container loading and international freight operations",
+  },
 ]
 
 export function HeroCarousel() {
@@ -44,7 +56,7 @@ export function HeroCarousel() {
         >
           <img
             src={slide.image}
-            alt={`Hero banner ${i + 1}`}
+            alt={slide.alt}
             className="h-full w-full object-cover"
           />
           {/* Dark overlay */}
@@ -56,12 +68,13 @@ export function HeroCarousel() {
       <div className="relative z-10 flex h-full items-center">
         <div className="mx-auto w-full max-w-7xl px-4 lg:px-8">
           <div className="max-w-2xl">
-            {/* Gold accent line */}
-            <div className="mb-6 h-1 w-20 bg-gold" />
+            <div className="mb-4 inline-flex rounded-full border border-white/15 bg-white/10 px-4 py-1.5 text-xs font-semibold uppercase tracking-[0.24em] text-white/90 backdrop-blur-sm">
+              USA food export and logistics
+            </div>
 
             <h1
               key={`title-${current}`}
-              className="animate-in fade-in slide-in-from-bottom-4 mb-6 text-balance text-4xl font-bold leading-tight tracking-tight text-white md:text-5xl lg:text-6xl"
+              className="animate-in fade-in slide-in-from-bottom-4 mb-5 max-w-xl text-balance text-4xl font-bold leading-tight tracking-tight text-white md:text-5xl lg:text-6xl"
               style={{ animationDuration: "700ms" }}
             >
               {titles[current]}
@@ -69,7 +82,7 @@ export function HeroCarousel() {
 
             <p
               key={`sub-${current}`}
-              className="animate-in fade-in slide-in-from-bottom-4 mb-8 max-w-lg text-pretty text-lg leading-relaxed text-white/80"
+              className="animate-in fade-in slide-in-from-bottom-4 mb-8 max-w-xl text-pretty text-base leading-relaxed text-white/78 md:text-lg"
               style={{ animationDuration: "700ms", animationDelay: "150ms", animationFillMode: "backwards" }}
             >
               {subs[current]}

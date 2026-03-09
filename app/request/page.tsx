@@ -1,6 +1,6 @@
 "use client"
 
-import { useState, useEffect } from "react"
+import { Suspense, useState, useEffect } from "react"
 import { useSearchParams } from "next/navigation"
 import {
   Send,
@@ -23,7 +23,7 @@ import { Card, CardContent, CardHeader, CardTitle, CardDescription } from "@/com
 import { HeroBanner } from "@/components/hero-banner"
 import { useLanguage } from "@/contexts/language-context"
 
-export default function RequestPage() {
+function RequestPageContent() {
   const { t } = useLanguage()
   const searchParams = useSearchParams()
   const [sending, setSending] = useState(false)
@@ -287,5 +287,15 @@ export default function RequestPage() {
         </div>
       </section>
     </>
+  )
+}
+
+export default function RequestPage() {
+  const { t } = useLanguage()
+
+  return (
+    <Suspense fallback={<HeroBanner title={t.requestPage.title} subtitle={t.requestPage.subtitle} />}>
+      <RequestPageContent />
+    </Suspense>
   )
 }

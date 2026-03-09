@@ -3,10 +3,11 @@
 import { useState, useEffect } from "react"
 import Link from "next/link"
 import { usePathname } from "next/navigation"
-import { Menu, Globe, Ship, X } from "lucide-react"
+import { Menu, Globe } from "lucide-react"
 import { Button } from "@/components/ui/button"
 import { Sheet, SheetContent, SheetTrigger, SheetTitle } from "@/components/ui/sheet"
 import { useLanguage } from "@/contexts/language-context"
+import { Logo } from "@/components/logo"
 
 export function Navbar() {
   const [scrolled, setScrolled] = useState(false)
@@ -46,25 +47,7 @@ export function Navbar() {
       <nav className="mx-auto flex max-w-7xl items-center justify-between px-4 py-3 lg:px-8">
         {/* Logo */}
         <Link href="/" className="flex items-center gap-2">
-          <div className="flex h-10 w-10 items-center justify-center rounded-lg bg-primary">
-            <Ship className="h-6 w-6 text-primary-foreground" />
-          </div>
-          <div className="flex flex-col">
-            <span
-              className={`text-lg font-bold leading-tight tracking-tight transition-colors ${
-                scrolled || !isHome ? "text-foreground" : "text-white"
-              }`}
-            >
-              CHINA Trading
-            </span>
-            <span
-              className={`text-[10px] uppercase tracking-widest transition-colors ${
-                scrolled || !isHome ? "text-gold" : "text-gold"
-              }`}
-            >
-              International Export
-            </span>
-          </div>
+          <Logo inverted={!scrolled && isHome} />
         </Link>
 
         {/* Desktop Nav */}

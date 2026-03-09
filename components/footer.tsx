@@ -1,10 +1,12 @@
 "use client"
 
 import Link from "next/link"
-import { Ship, MapPin, Phone, Mail, Send } from "lucide-react"
+import { MapPin, Phone, Mail, Send } from "lucide-react"
 import { Input } from "@/components/ui/input"
 import { Button } from "@/components/ui/button"
 import { useLanguage } from "@/contexts/language-context"
+import { Logo } from "@/components/logo"
+import { siteConfig } from "@/lib/site-config"
 
 export function Footer() {
   const { t } = useLanguage()
@@ -16,17 +18,7 @@ export function Footer() {
           {/* Brand */}
           <div className="flex flex-col gap-4">
             <Link href="/" className="flex items-center gap-2">
-              <div className="flex h-10 w-10 items-center justify-center rounded-lg bg-primary">
-                <Ship className="h-6 w-6 text-primary-foreground" />
-              </div>
-              <div className="flex flex-col">
-                <span className="text-lg font-bold leading-tight tracking-tight text-white">
-                  CHINA Trading
-                </span>
-                <span className="text-[10px] uppercase tracking-widest text-gold">
-                  International Export
-                </span>
-              </div>
+              <Logo inverted />
             </Link>
             <p className="text-sm leading-relaxed text-white/70">
               {t.footer.description}
@@ -65,17 +57,17 @@ export function Footer() {
               <div className="flex items-start gap-2">
                 <MapPin className="mt-0.5 h-4 w-4 shrink-0 text-gold" />
                 <div className="text-sm text-white/70">
-                  <p>{t.footer.address}</p>
-                  <p>{t.footer.city}</p>
+                  <p>{siteConfig.contact.addressLine1}</p>
+                  <p>{siteConfig.contact.addressLine2}</p>
                 </div>
               </div>
               <div className="flex items-center gap-2">
                 <Phone className="h-4 w-4 shrink-0 text-gold" />
-                <span className="text-sm text-white/70">{t.footer.phone}</span>
+                <span className="text-sm text-white/70">{siteConfig.contact.phone}</span>
               </div>
               <div className="flex items-center gap-2">
                 <Mail className="h-4 w-4 shrink-0 text-gold" />
-                <span className="text-sm text-white/70">{t.footer.email}</span>
+                <span className="text-sm text-white/70">{siteConfig.contact.email}</span>
               </div>
             </div>
           </div>
@@ -101,10 +93,10 @@ export function Footer() {
         {/* Bottom bar */}
         <div className="mt-12 flex flex-col items-center justify-between gap-4 border-t border-white/10 pt-8 md:flex-row">
           <p className="text-sm text-white/50">
-            &copy; {new Date().getFullYear()} CHINA Trading. {t.footer.rights}
+            &copy; {new Date().getFullYear()} {siteConfig.name}. {t.footer.rights}
           </p>
           <div className="flex gap-4">
-            <span className="text-sm text-white/50">info@chinatrading.com</span>
+            <span className="text-sm text-white/50">{siteConfig.contact.email}</span>
           </div>
         </div>
       </div>
