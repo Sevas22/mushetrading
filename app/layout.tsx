@@ -16,18 +16,18 @@ export const metadata: Metadata = {
   description: siteConfig.description,
   generator: "v0.app",
   keywords: [
-    "Jibala Trading",
-    "Middle East trade company",
-    "GCC import export",
-    "Dubai sourcing partner",
-    "private label export",
-    "food distribution Middle East",
-    "container logistics GCC",
+    "MusheTrading",
+    "China trade company",
+    "China import export",
+    "Shanghai sourcing partner",
+    "private label export China",
+    "distribution China",
+    "container logistics China",
   ],
 }
 
 export const viewport: Viewport = {
-  themeColor: "#0F5C4D",
+  themeColor: "#991B1B",
 }
 
 export default function RootLayout({

@@ -1,14 +1,14 @@
 export const siteConfig = {
-  name: "Jibala Trading",
-  shortName: "Jibala",
-  tagline: "Middle East Trade & Supply",
+  name: "MusheTrading",
+  shortName: "Mushe",
+  tagline: "China-Focused Export & Sourcing",
   description:
-    "Premium trading company specialized in sourcing, export coordination, private label programs, and logistics support for distributors, wholesalers, and retail buyers across the Middle East.",
-  url: "https://jibalatrading.com",
+    "Professional export and sourcing company specialized in connecting global brands with reliable buyers, distributors, and e-commerce channels across mainland China.",
+  url: "https://mushetrading.com",
   contact: {
-    phone: "+971 4 555 0182",
-    email: "sales@jibalatrading.com",
-    addressLine1: "Dubai Trade Centre, Office 402",
-    addressLine2: "Dubai, United Arab Emirates",
+    phone: "+86 21 0000 0000",
+    email: "contact@mushetrading.com",
+    addressLine1: "Pudong Business District",
+    addressLine2: "Shanghai, China",
   },
 } as const

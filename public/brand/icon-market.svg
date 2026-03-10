@@ -1,8 +1,12 @@
 <svg width="128" height="128" viewBox="0 0 128 128" fill="none" xmlns="http://www.w3.org/2000/svg">
-  <rect width="128" height="128" rx="32" fill="#17483E"/>
-  <path d="M34 88H94" stroke="#F6EFE0" stroke-width="6" stroke-linecap="round"/>
-  <path d="M42 88V58C42 46 52 36 64 36C76 36 86 46 86 58V88" stroke="#F6EFE0" stroke-width="6" stroke-linecap="round"/>
-  <path d="M52 88V64H76V88" stroke="#D7A74B" stroke-width="6" stroke-linejoin="round"/>
-  <path d="M30 54H98" stroke="#D7A74B" stroke-width="6" stroke-linecap="round"/>
-  <path d="M64 20L72 32H56L64 20Z" fill="#D7A74B"/>
+  <!-- Fondo rojo China -->
+  <rect width="128" height="128" rx="32" fill="#B91C1C"/>
+  <!-- Curvas de demanda/oferta en dorado y azul -->
+  <path d="M24 84C34 70 46 64 64 64C82 64 94 70 104 84" stroke="#FDE7C7" stroke-width="6" stroke-linecap="round"/>
+  <path d="M24 52C34 64 46 70 64 70C82 70 94 64 104 52" stroke="#D4A017" stroke-width="4" stroke-linecap="round"/>
+  <!-- Punto central de mercado -->
+  <circle cx="64" cy="40" r="12" stroke="#FDE7C7" stroke-width="4"/>
+  <!-- Pequeña bandera dorada arriba (China focus) -->
+  <path d="M64 18V32" stroke="#FACC6B" stroke-width="4" stroke-linecap="round"/>
+  <path d="M64 20L74 26L64 32Z" fill="#FACC6B"/>
 </svg>

@@ -1,7 +1,13 @@
 <svg width="128" height="128" viewBox="0 0 128 128" fill="none" xmlns="http://www.w3.org/2000/svg">
-  <rect width="128" height="128" rx="32" fill="#0F5C4D"/>
-  <path d="M64 18L72 34H90L76 44L82 60L64 50L46 60L52 44L38 34H56L64 18Z" fill="#D7A74B"/>
-  <path d="M38 74L64 58L90 74V94L64 110L38 94V74Z" stroke="#F6EFE0" stroke-width="6" stroke-linejoin="round"/>
-  <path d="M38 74L64 90L90 74" stroke="#F6EFE0" stroke-width="6" stroke-linecap="round" stroke-linejoin="round"/>
-  <path d="M64 90V110" stroke="#F6EFE0" stroke-width="6" stroke-linecap="round"/>
+  <!-- Fondo rojo China -->
+  <rect width="128" height="128" rx="32" fill="#B91C1C"/>
+  <!-- Ruta de abastecimiento en dorado -->
+  <path d="M24 88L52 48L76 68L104 32" stroke="#D4A017" stroke-width="6" stroke-linecap="round" stroke-linejoin="round"/>
+  <!-- Puntos de control -->
+  <circle cx="52" cy="48" r="6" fill="#F5D8A0"/>
+  <circle cx="76" cy="68" r="6" fill="#F5D8A0"/>
+  <circle cx="104" cy="32" r="7" fill="#FACC6B"/>
+  <!-- Bloques azules (proveedores) -->
+  <rect x="24" y="72" width="18" height="22" rx="4" fill="#0B1B33"/>
+  <rect x="52" y="84" width="18" height="18" rx="4" fill="#0B1B33"/>
 </svg>

@@ -1,26 +1,27 @@
 <svg width="760" height="150" viewBox="0 0 760 150" fill="none" xmlns="http://www.w3.org/2000/svg">
-  <g transform="translate(10 18)">
+  <!-- Icono MT para fondo oscuro: tonos claros para contraste -->
+  <g transform="translate(20 22)">
+    <!-- M clara -->
     <path
-      d="M18 22H102V38H76V102C76 116 65 128 48 128C35 128 23 122 12 110L24 97C31 105 39 109 46 109C56 109 61 103 61 94V38H18V22Z"
-      fill="#D9EEF1"
+      d="M8 108V14H32L50 52L68 14H92V108H72V53L52 92H48L28 53V108H8Z"
+      fill="#E5E7EB"
     />
+    <!-- T roja clara -->
     <path
-      d="M95 22H177V38H150V126H133V38H95V22Z"
-      fill="#3FC1A7"
+      d="M112 14H166V34H144V108H134H122V34H112V14Z"
+      fill="#F97373"
     />
-    <path
-      d="M126 126H109V80C109 50 125 30 159 22L163 36C139 43 126 57 126 80V126Z"
-      fill="#3FC1A7"
-    />
-    <path
-      d="M79 18L87 30H101L91 38L95 51L79 43L63 51L67 38L57 30H71L79 18Z"
-      fill="none"
-      stroke="#E7D2A1"
-      stroke-width="4"
-      stroke-linejoin="round"
-    />
+    <!-- Estrella dorada suave -->
+    <g transform="translate(128 -6)">
+      <path
+        d="M18 0L21 11H32L23 17L26 28L18 22L10 28L13 17L4 11H15L18 0Z"
+        fill="#FACC6B"
+      />
+    </g>
   </g>
-  <g transform="translate(225 24)">
+
+  <!-- Wordmark blanco + bandas en colores China -->
+  <g transform="translate(240 24)">
     <text
       x="0"
       y="52"
@@ -30,11 +31,11 @@
       font-weight="800"
       letter-spacing="1"
     >
-      JIBALA TRADING
+      MUSHETRADING
     </text>
-    <path d="M0 88c88 7 171 5 257 0 77-4 151-4 229 0" stroke="#3FC1A7" stroke-width="6" fill="none" stroke-linecap="round"/>
-    <path d="M0 98c96 7 185 5 275 0 76-4 148-4 223 0" stroke="#D9EEF1" stroke-width="5" fill="none" stroke-linecap="round"/>
-    <path d="M0 108c104 7 196 5 287 0 74-4 144-4 215 0" stroke="#E7D2A1" stroke-width="4" fill="none" stroke-linecap="round"/>
-    <path d="M0 118c112 7 206 5 298 0 72-4 139-4 207 0" stroke="#EFE5CE" stroke-width="3" fill="none" stroke-linecap="round"/>
+    <path d="M0 88c88 7 171 5 257 0 77-4 151-4 229 0" stroke="#F97373" stroke-width="6" fill="none" stroke-linecap="round"/>
+    <path d="M0 98c96 7 185 5 275 0 76-4 148-4 223 0" stroke="#E5E7EB" stroke-width="5" fill="none" stroke-linecap="round"/>
+    <path d="M0 108c104 7 196 5 287 0 74-4 144-4 215 0" stroke="#FACC6B" stroke-width="4" fill="none" stroke-linecap="round"/>
+    <path d="M0 118c112 7 206 5 298 0 72-4 139-4 207 0" stroke="#FDE7C7" stroke-width="3" fill="none" stroke-linecap="round"/>
   </g>
 </svg>

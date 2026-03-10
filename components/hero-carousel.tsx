@@ -9,19 +9,13 @@ import { siteConfig } from "@/lib/site-config"
 
 const slides = [
   {
-    image:
-      "https://images.unsplash.com/photo-1578575437130-527eed3abbec?auto=format&fit=crop&w=1800&q=80",
-    alt: "Container port operations for Middle East trade routes",
+    image: "/images/hero-1.jpg",
   },
   {
-    image:
-      "https://images.unsplash.com/photo-1519003722824-194d4455a60c?auto=format&fit=crop&w=1800&q=80",
-    alt: "Premium sourcing and packaged goods for export programs",
+    image: "/images/hero-2.jpg",
   },
   {
-    image:
-      "https://images.unsplash.com/photo-1518684079-3c830dcef090?auto=format&fit=crop&w=1800&q=80",
-    alt: "Modern Gulf skyline representing regional trade and business",
+    image: "/images/hero-3.jpg",
   },
 ]
 
@@ -32,9 +26,9 @@ export function HeroCarousel() {
   const titles = [t.hero.slide1Title, t.hero.slide2Title, t.hero.slide3Title]
   const subs = [t.hero.slide1Sub, t.hero.slide2Sub, t.hero.slide3Sub]
   const highlights = [
-    { icon: CircleCheckBig, label: "UAE / KSA / Qatar" },
-    { icon: PackageCheck, label: "Private Label Ready" },
-    { icon: ShieldCheck, label: "Sourcing + Logistics" },
+    { icon: CircleCheckBig, label: "Shanghai / Shenzhen / Guangzhou" },
+    { icon: PackageCheck, label: "China-ready private label" },
+    { icon: ShieldCheck, label: "Sourcing · QC · Logistics" },
   ]
 
   const next = useCallback(() => {
@@ -61,7 +55,7 @@ export function HeroCarousel() {
         >
           <img
             src={slide.image}
-            alt={slide.alt}
+            alt=""
             className="h-full w-full object-cover"
           />
           <div className="absolute inset-0 bg-[linear-gradient(110deg,rgba(8,28,29,0.94)_0%,rgba(8,28,29,0.76)_42%,rgba(8,28,29,0.28)_100%)]" />
@@ -73,7 +67,7 @@ export function HeroCarousel() {
           <div className="grid items-end gap-10 pt-20 lg:grid-cols-[minmax(0,1.2fr)_380px]">
             <div className="max-w-3xl">
               <div className="mb-5 inline-flex rounded-full border border-white/15 bg-white/10 px-4 py-1.5 text-xs font-semibold uppercase tracking-[0.24em] text-white/90 backdrop-blur-sm">
-                Middle East sourcing, export, and distribution
+                China-focused sourcing, export, and distribution
               </div>
 
               <h1
@@ -131,15 +125,15 @@ export function HeroCarousel() {
             <div className="animate-in fade-in slide-in-from-bottom-4 hidden lg:block" style={{ animationDuration: "700ms", animationDelay: "380ms", animationFillMode: "backwards" }}>
               <div className="rounded-[28px] border border-white/15 bg-white/10 p-6 text-white shadow-2xl backdrop-blur-md">
                 <p className="mb-3 text-xs font-semibold uppercase tracking-[0.28em] text-gold">
-                  Regional Focus
+                  China Market Focus
                 </p>
                 <h3 className="mb-5 text-2xl font-semibold leading-tight">
-                  Trade execution built for premium Middle East retail and wholesale channels.
+                  Trade execution built for modern Chinese retail, e-commerce, and wholesale channels.
                 </h3>
                 <div className="space-y-4 border-t border-white/10 pt-5 text-sm text-white/80">
                   <div className="flex items-center justify-between gap-4">
                     <span>Primary Hub</span>
-                    <span className="font-semibold text-white">Dubai, UAE</span>
+                    <span className="font-semibold text-white">Shanghai, China</span>
                   </div>
                   <div className="flex items-center justify-between gap-4">
                     <span>Programs</span>

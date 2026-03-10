@@ -24,7 +24,7 @@ export function Footer() {
               {t.footer.description}
             </p>
             <div className="inline-flex w-fit rounded-full border border-white/15 bg-white/8 px-3 py-1 text-[11px] font-semibold uppercase tracking-[0.25em] text-gold">
-              GCC Trade Desk
+              China Trade Desk
             </div>
           </div>
 

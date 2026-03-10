@@ -1,6 +1,10 @@
 <svg width="128" height="128" viewBox="0 0 128 128" fill="none" xmlns="http://www.w3.org/2000/svg">
-  <rect width="128" height="128" rx="32" fill="#F1E4C7"/>
-  <circle cx="64" cy="50" r="24" fill="#0F5C4D"/>
-  <path d="M64 34L69 44L80 45L72 53L74 64L64 58L54 64L56 53L48 45L59 44L64 34Z" fill="#D7A74B"/>
-  <path d="M52 72L40 106L64 92L88 106L76 72" stroke="#0F5C4D" stroke-width="6" stroke-linejoin="round"/>
+  <!-- Fondo claro dorado -->
+  <rect width="128" height="128" rx="32" fill="#FDE7C7"/>
+  <!-- Escudo rojo -->
+  <path d="M40 34H88V64C88 80 76 94 64 100C52 94 40 80 40 64V34Z" fill="#B91C1C"/>
+  <!-- Check de calidad -->
+  <path d="M50 61L60 71L82 49" stroke="#FACC6B" stroke-width="6" stroke-linecap="round" stroke-linejoin="round"/>
+  <!-- Base azul -->
+  <path d="M40 82L32 108L64 94L96 108L88 82" stroke="#0B1B33" stroke-width="6" stroke-linejoin="round"/>
 </svg>

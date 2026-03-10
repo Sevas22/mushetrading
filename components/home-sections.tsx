@@ -28,25 +28,25 @@ export function ValuesSection() {
 
   const values = [
     {
-      icon: "/brand/icon-sourcing.svg",
+      icon: ShieldCheck,
       title: t.values.quality,
       desc: t.values.qualityDesc,
       cardClass: "border-primary/15 bg-white/85",
     },
     {
-      icon: "/brand/icon-quality.svg",
+      icon: Globe,
       title: t.values.focus,
       desc: t.values.focusDesc,
       cardClass: "border-gold/20 bg-white/85",
     },
     {
-      icon: "/brand/icon-logistics.svg",
+      icon: Truck,
       title: t.values.innovation,
       desc: t.values.innovationDesc,
       cardClass: "border-primary/15 bg-white/85",
     },
     {
-      icon: "/brand/icon-market.svg",
+      icon: Building2,
       title: t.values.global,
       desc: t.values.globalDesc,
       cardClass: "border-gold/20 bg-white/85",
@@ -72,7 +72,7 @@ export function ValuesSection() {
             >
               <CardContent className="flex flex-col items-center p-8 text-center">
                 <div className="mb-5 flex h-18 w-18 items-center justify-center rounded-2xl bg-secondary/60 p-3 shadow-sm">
-                  <img src={v.icon} alt={v.title} className="h-16 w-16" />
+                  <v.icon className="h-8 w-8 text-primary" />
                 </div>
                 <h3 className="mb-2 text-lg font-semibold text-foreground">{v.title}</h3>
                 <p className="text-sm leading-relaxed text-muted-foreground">{v.desc}</p>
@@ -115,9 +115,9 @@ export function AboutSection() {
               />
             </div>
             <div className="absolute -bottom-5 -right-5 rounded-3xl border border-primary/10 bg-card/90 p-5 shadow-xl">
-              <p className="text-xs font-semibold uppercase tracking-[0.28em] text-primary">Trade Hub</p>
-              <p className="mt-2 text-lg font-semibold text-foreground">Dubai, UAE</p>
-              <p className="mt-1 text-sm text-muted-foreground">Premium sourcing and distribution coordination.</p>
+              <p className="text-xs font-semibold uppercase tracking-[0.28em] text-primary">China Trade Hub</p>
+              <p className="mt-2 text-lg font-semibold text-foreground">Shanghai, China</p>
+              <p className="mt-1 text-sm text-muted-foreground">Professional sourcing, compliance, and logistics coordination.</p>
             </div>
           </div>
 
@@ -212,10 +212,10 @@ export function WhyChooseSection() {
   const { t } = useLanguage()
 
   const features = [
-    { icon: "/brand/icon-market.svg", title: t.whyChoose.experience, desc: t.whyChoose.experienceDesc },
-    { icon: "/brand/icon-quality.svg", title: t.whyChoose.qualityAssurance, desc: t.whyChoose.qualityAssuranceDesc },
-    { icon: "/brand/icon-logistics.svg", title: t.whyChoose.reliableService, desc: t.whyChoose.reliableServiceDesc },
-    { icon: "/brand/icon-sourcing.svg", title: t.whyChoose.competitivePricing, desc: t.whyChoose.competitivePricingDesc },
+    { icon: Globe, title: t.whyChoose.experience, desc: t.whyChoose.experienceDesc },
+    { icon: ShieldCheck, title: t.whyChoose.qualityAssurance, desc: t.whyChoose.qualityAssuranceDesc },
+    { icon: Truck, title: t.whyChoose.reliableService, desc: t.whyChoose.reliableServiceDesc },
+    { icon: Crown, title: t.whyChoose.competitivePricing, desc: t.whyChoose.competitivePricingDesc },
   ]
 
   return (
@@ -224,7 +224,7 @@ export function WhyChooseSection() {
       <div className="mx-auto max-w-7xl px-4 lg:px-8">
         <div className="relative mb-12 text-center">
           <div className="mx-auto mb-4 inline-flex rounded-full border border-primary/10 bg-primary/5 px-4 py-1.5 text-xs font-semibold uppercase tracking-[0.24em] text-primary">
-            Why Jibala
+            Why MusheTrading
           </div>
           <h2 className="mb-3 text-balance text-3xl font-bold tracking-tight text-foreground md:text-4xl">
             {t.whyChoose.title}
@@ -238,7 +238,7 @@ export function WhyChooseSection() {
               className="flex gap-5 rounded-2xl border border-primary/10 bg-white/80 p-6 shadow-sm backdrop-blur transition-all hover:-translate-y-1 hover:shadow-xl"
             >
               <div className="flex h-16 w-16 shrink-0 items-center justify-center rounded-2xl bg-secondary/70 p-2">
-                <img src={f.icon} alt={f.title} className="h-14 w-14" />
+                <f.icon className="h-8 w-8 text-primary" />
               </div>
               <div>
                 <h3 className="mb-1 text-lg font-semibold text-foreground">{f.title}</h3>
@@ -256,18 +256,18 @@ export function CountriesSection() {
   const { t } = useLanguage()
 
   const markets = [
-    { name: "United Arab Emirates", code: "UAE", icon: Landmark },
-    { name: "Saudi Arabia", code: "KSA", icon: Crown },
-    { name: "Qatar", code: "QAT", icon: Building2 },
-    { name: "Kuwait", code: "KWT", icon: ShieldCheck },
-    { name: "Oman", code: "OMN", icon: Globe },
-    { name: "Bahrain", code: "BHR", icon: Crown },
-    { name: "Jordan", code: "JOR", icon: Landmark },
-    { name: "Iraq", code: "IRQ", icon: Truck },
+    { name: "Shanghai", code: "SHA", icon: Landmark },
+    { name: "Shenzhen", code: "SZX", icon: Crown },
+    { name: "Guangzhou", code: "CAN", icon: Building2 },
+    { name: "Hong Kong", code: "HKG", icon: ShieldCheck },
+    { name: "Ningbo", code: "NGB", icon: Globe },
+    { name: "Tianjin", code: "TSN", icon: Crown },
+    { name: "Beijing", code: "PEK", icon: Landmark },
+    { name: "Chongqing", code: "CKG", icon: Truck },
   ]
 
   return (
-    <section className="bg-[linear-gradient(135deg,#10353a_0%,#0d4d44_55%,#c79d47_100%)] py-20 text-white">
+    <section className="bg-[linear-gradient(135deg,#020617_0%,#991b1b_55%,#fbbf24_100%)] py-20 text-white">
       <div className="mx-auto max-w-7xl px-4 lg:px-8">
         <div className="mb-12 text-center">
           <div className="mx-auto mb-4 inline-flex rounded-full border border-white/15 bg-white/8 px-4 py-1.5 text-xs font-semibold uppercase tracking-[0.24em] text-white/90">

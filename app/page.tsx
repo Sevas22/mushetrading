@@ -7,7 +7,6 @@ import {
   CategoriesSection,
   WhyChooseSection,
   CountriesSection,
-  CTABanner,
 } from "@/components/home-sections"
 
 export default function HomePage() {
@@ -19,7 +18,6 @@ export default function HomePage() {
       <CategoriesSection />
       <WhyChooseSection />
       <CountriesSection />
-      <CTABanner />
     </>
   )
 }

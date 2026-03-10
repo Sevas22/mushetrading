@@ -1,22 +1,28 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64">
-  <rect x="2" y="2" width="60" height="60" rx="16" fill="#143B3B" />
+  <!-- Fondo redondo con colores de MusheTrading (rojo China + degradado) -->
+  <defs>
+    <linearGradient id="mt-bg" x1="0" y1="0" x2="64" y2="64" gradientUnits="userSpaceOnUse">
+      <stop offset="0" stop-color="#B91C1C" />
+      <stop offset="1" stop-color="#0B1B33" />
+    </linearGradient>
+  </defs>
+  <rect x="2" y="2" width="60" height="60" rx="16" fill="url(#mt-bg)" />
+
+  <!-- Inicial M en claro -->
   <path
-    d="M10 18H34V23H26V40C26 48 21 53 14 53C10 53 7 51 5 49L9 44C10 45 12 47 14 47C17 47 19 45 19 41V23H10V18Z"
-    fill="#DCEEEF"
+    d="M10 46V18H18L23 28L28 18H36V46H30V29L24 40H22L16 29V46H10Z"
+    fill="#F9FAFB"
   />
+
+  <!-- Inicial T en rojo más claro -->
   <path
-    d="M30 18H54V23H45V52H39V23H30V18Z"
-    fill="#14A06F"
+    d="M42 18H54V24H49V46H45H42V24H42V18Z"
+    fill="#F97373"
   />
+
+  <!-- Pequeña estrella dorada sobre la T -->
   <path
-    d="M42 52H36V35C36 27 40 21 50 18L51 23C44 25 42 29 42 35V52Z"
-    fill="#14A06F"
-  />
-  <path
-    d="M28 9L31 14H37L32.5 17.5L34 23L28 20L22 23L23.5 17.5L19 14H25L28 9Z"
-    fill="none"
-    stroke="#C79D47"
-    stroke-width="2.5"
-    stroke-linejoin="round"
+    d="M49 10L51 14H55L52 16.5L53 21L49 18.5L45 21L46 16.5L43 14H47L49 10Z"
+    fill="#FACC6B"
   />
 </svg>
