@@ -12,7 +12,7 @@ export function Footer() {
   const { t } = useLanguage()
 
   return (
-    <footer className="bg-navy text-white">
+    <footer className="border-t border-white/10 bg-navy text-white">
       <div className="mx-auto max-w-7xl px-4 py-16 lg:px-8">
         <div className="grid grid-cols-1 gap-12 md:grid-cols-2 lg:grid-cols-4">
           {/* Brand */}
@@ -23,6 +23,9 @@ export function Footer() {
             <p className="text-sm leading-relaxed text-white/70">
               {t.footer.description}
             </p>
+            <div className="inline-flex w-fit rounded-full border border-white/15 bg-white/8 px-3 py-1 text-[11px] font-semibold uppercase tracking-[0.25em] text-gold">
+              GCC Trade Desk
+            </div>
           </div>
 
           {/* Quick Links */}
@@ -83,7 +86,7 @@ export function Footer() {
                 placeholder={t.footer.emailPlaceholder}
                 className="border-white/20 bg-white/10 text-white placeholder:text-white/40"
               />
-              <Button size="icon" className="shrink-0 bg-gold text-white hover:bg-gold/90">
+              <Button size="icon" className="shrink-0 bg-gold text-navy hover:bg-gold/90">
                 <Send className="h-4 w-4" />
               </Button>
             </div>

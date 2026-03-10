@@ -38,28 +38,49 @@ export default function ProductsPage() {
 
   return (
     <>
-      <HeroBanner title={t.productsPage.title} subtitle={t.productsPage.subtitle} />
+      <HeroBanner
+        title={t.productsPage.title}
+        subtitle={t.productsPage.subtitle}
+        image="/brand/hero-port.svg"
+      />
 
       <section className="bg-background py-16">
         <div className="mx-auto max-w-7xl px-4 lg:px-8">
-          {/* Filters bar */}
-          <div className="mb-10 flex flex-col gap-4 md:flex-row md:items-center md:justify-between">
+          <div className="mb-10 rounded-[28px] border border-border/70 bg-card/85 p-5 shadow-sm backdrop-blur md:p-6">
+            <div className="mb-5 flex flex-col gap-2 md:flex-row md:items-end md:justify-between">
+              <div>
+                <p className="text-xs font-semibold uppercase tracking-[0.24em] text-primary">
+                  Export catalog filters
+                </p>
+                <h2 className="mt-2 text-2xl font-semibold text-foreground">
+                  Find the right category for your market.
+                </h2>
+              </div>
+              <div className="rounded-full border border-gold/30 bg-gold/10 px-4 py-2 text-sm font-medium text-primary">
+                {filtered.length} products available
+              </div>
+            </div>
+
             <div className="relative w-full md:max-w-sm">
               <Search className="absolute left-3 top-1/2 h-4 w-4 -translate-y-1/2 text-muted-foreground" />
               <Input
                 placeholder={t.storePage.search}
                 value={search}
                 onChange={(e) => setSearch(e.target.value)}
-                className="pl-10"
+                className="h-11 rounded-full border-border/80 bg-background pl-10"
               />
             </div>
-            <div className="flex flex-wrap items-center gap-2">
+            <div className="mt-4 flex flex-wrap items-center gap-2 md:mt-5">
               <Filter className="h-4 w-4 text-muted-foreground" />
               <Button
                 variant={selectedCategory === "all" ? "default" : "outline"}
                 size="sm"
                 onClick={() => setSelectedCategory("all")}
-                className={selectedCategory === "all" ? "bg-primary text-primary-foreground" : ""}
+                className={
+                  selectedCategory === "all"
+                    ? "rounded-full bg-primary text-primary-foreground"
+                    : "rounded-full border-border/70 bg-background"
+                }
               >
                 {t.productsPage.allCategories}
               </Button>
@@ -69,7 +90,11 @@ export default function ProductsPage() {
                   variant={selectedCategory === cat ? "default" : "outline"}
                   size="sm"
                   onClick={() => setSelectedCategory(cat)}
-                  className={selectedCategory === cat ? "bg-primary text-primary-foreground" : ""}
+                  className={
+                    selectedCategory === cat
+                      ? "rounded-full bg-primary text-primary-foreground"
+                      : "rounded-full border-border/70 bg-background"
+                  }
                 >
                   {cat}
                 </Button>
@@ -82,7 +107,7 @@ export default function ProductsPage() {
             {filtered.map((product) => (
               <Card
                 key={product.id}
-                className="group overflow-hidden border-0 bg-card shadow-md transition-all hover:-translate-y-1 hover:shadow-xl"
+                className="group overflow-hidden rounded-[28px] border border-border/60 bg-card shadow-sm transition-all hover:-translate-y-1 hover:shadow-xl"
               >
                 <div className="relative aspect-[4/3] overflow-hidden">
                   <Image
@@ -93,11 +118,11 @@ export default function ProductsPage() {
                     sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 33vw"
                   />
                   <div className="absolute inset-0 bg-gradient-to-t from-black/40 to-transparent opacity-0 transition-opacity group-hover:opacity-100" />
-                  <Badge className="absolute left-3 top-3 bg-primary text-primary-foreground">
+                  <Badge className="absolute left-3 top-3 bg-primary text-primary-foreground shadow-sm">
                     {product.category}
                   </Badge>
                 </div>
-                <CardContent className="flex flex-col gap-3 p-5">
+                <CardContent className="flex flex-col gap-3 p-6">
                   <h3 className="text-lg font-semibold text-foreground">{product.name}</h3>
                   <p className="line-clamp-2 text-sm leading-relaxed text-muted-foreground">
                     {product.description}

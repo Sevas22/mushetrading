@@ -114,12 +114,19 @@ function RequestPageContent() {
 
   return (
     <>
-      <HeroBanner title={t.requestPage.title} subtitle={t.requestPage.subtitle} />
+      <HeroBanner
+        title={t.requestPage.title}
+        subtitle={t.requestPage.subtitle}
+        image="/brand/hero-skyline.svg"
+      />
 
       <section className="bg-background py-16">
         <div className="mx-auto max-w-3xl px-4 lg:px-8">
-          <Card className="border-0 shadow-xl">
+          <Card className="rounded-[28px] border border-border/70 bg-card/95 shadow-xl">
             <CardHeader className="pb-2">
+              <div className="mb-3 inline-flex w-fit rounded-full border border-primary/10 bg-primary/5 px-4 py-1.5 text-xs font-semibold uppercase tracking-[0.24em] text-primary">
+                Business inquiry
+              </div>
               <CardTitle className="text-2xl text-foreground">{t.requestPage.title}</CardTitle>
               <CardDescription className="text-muted-foreground">
                 {t.requestPage.subtitle}
@@ -294,7 +301,15 @@ export default function RequestPage() {
   const { t } = useLanguage()
 
   return (
-    <Suspense fallback={<HeroBanner title={t.requestPage.title} subtitle={t.requestPage.subtitle} />}>
+    <Suspense
+      fallback={
+        <HeroBanner
+          title={t.requestPage.title}
+          subtitle={t.requestPage.subtitle}
+          image="/brand/hero-skyline.svg"
+        />
+      }
+    >
       <RequestPageContent />
     </Suspense>
   )

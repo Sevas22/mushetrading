@@ -2,25 +2,26 @@
 
 import { useState, useEffect, useCallback } from "react"
 import Link from "next/link"
-import { ChevronLeft, ChevronRight } from "lucide-react"
+import { ArrowRight, ChevronLeft, ChevronRight, CircleCheckBig, PackageCheck, ShieldCheck } from "lucide-react"
 import { Button } from "@/components/ui/button"
 import { useLanguage } from "@/contexts/language-context"
+import { siteConfig } from "@/lib/site-config"
 
 const slides = [
   {
     image:
-      "https://images.unsplash.com/photo-1578575437130-527eed3abbec?auto=format&fit=crop&w=1600&q=80",
-    alt: "Shipping containers at a U.S. port terminal",
+      "https://images.unsplash.com/photo-1578575437130-527eed3abbec?auto=format&fit=crop&w=1800&q=80",
+    alt: "Container port operations for Middle East trade routes",
   },
   {
     image:
-      "https://images.unsplash.com/photo-1565891741441-64926e441838?auto=format&fit=crop&w=1600&q=80",
-    alt: "Food export logistics and warehouse operations",
+      "https://images.unsplash.com/photo-1519003722824-194d4455a60c?auto=format&fit=crop&w=1800&q=80",
+    alt: "Premium sourcing and packaged goods for export programs",
   },
   {
     image:
-      "https://images.unsplash.com/photo-1586528116311-ad8dd3c8310d?auto=format&fit=crop&w=1600&q=80",
-    alt: "Container loading and international freight operations",
+      "https://images.unsplash.com/photo-1518684079-3c830dcef090?auto=format&fit=crop&w=1800&q=80",
+    alt: "Modern Gulf skyline representing regional trade and business",
   },
 ]
 
@@ -30,6 +31,11 @@ export function HeroCarousel() {
 
   const titles = [t.hero.slide1Title, t.hero.slide2Title, t.hero.slide3Title]
   const subs = [t.hero.slide1Sub, t.hero.slide2Sub, t.hero.slide3Sub]
+  const highlights = [
+    { icon: CircleCheckBig, label: "UAE / KSA / Qatar" },
+    { icon: PackageCheck, label: "Private Label Ready" },
+    { icon: ShieldCheck, label: "Sourcing + Logistics" },
+  ]
 
   const next = useCallback(() => {
     setCurrent((prev) => (prev + 1) % slides.length)
@@ -45,8 +51,7 @@ export function HeroCarousel() {
   }, [next])
 
   return (
-    <section className="relative h-[85vh] min-h-[600px] w-full overflow-hidden">
-      {/* Slides */}
+    <section className="relative h-[92vh] min-h-[700px] w-full overflow-hidden">
       {slides.map((slide, i) => (
         <div
           key={i}
@@ -59,72 +64,113 @@ export function HeroCarousel() {
             alt={slide.alt}
             className="h-full w-full object-cover"
           />
-          {/* Dark overlay */}
-          <div className="absolute inset-0 bg-gradient-to-r from-navy/80 via-navy/60 to-navy/30" />
+          <div className="absolute inset-0 bg-[linear-gradient(110deg,rgba(8,28,29,0.94)_0%,rgba(8,28,29,0.76)_42%,rgba(8,28,29,0.28)_100%)]" />
         </div>
       ))}
 
-      {/* Content */}
       <div className="relative z-10 flex h-full items-center">
         <div className="mx-auto w-full max-w-7xl px-4 lg:px-8">
-          <div className="max-w-2xl">
-            <div className="mb-4 inline-flex rounded-full border border-white/15 bg-white/10 px-4 py-1.5 text-xs font-semibold uppercase tracking-[0.24em] text-white/90 backdrop-blur-sm">
-              USA food export and logistics
+          <div className="grid items-end gap-10 pt-20 lg:grid-cols-[minmax(0,1.2fr)_380px]">
+            <div className="max-w-3xl">
+              <div className="mb-5 inline-flex rounded-full border border-white/15 bg-white/10 px-4 py-1.5 text-xs font-semibold uppercase tracking-[0.24em] text-white/90 backdrop-blur-sm">
+                Middle East sourcing, export, and distribution
+              </div>
+
+              <h1
+                key={`title-${current}`}
+                className="animate-in fade-in slide-in-from-bottom-4 mb-5 max-w-2xl text-balance text-4xl font-bold leading-tight tracking-tight text-white md:text-6xl"
+                style={{ animationDuration: "700ms" }}
+              >
+                {titles[current]}
+              </h1>
+
+              <p
+                key={`sub-${current}`}
+                className="animate-in fade-in slide-in-from-bottom-4 mb-8 max-w-2xl text-pretty text-base leading-relaxed text-white/78 md:text-lg"
+                style={{ animationDuration: "700ms", animationDelay: "150ms", animationFillMode: "backwards" }}
+              >
+                {subs[current]}
+              </p>
+
+              <div
+                className="animate-in fade-in slide-in-from-bottom-4 mb-8 flex flex-wrap gap-3"
+                style={{ animationDuration: "700ms", animationDelay: "230ms", animationFillMode: "backwards" }}
+              >
+                {highlights.map((item) => (
+                  <div
+                    key={item.label}
+                    className="flex items-center gap-2 rounded-full border border-white/15 bg-white/10 px-4 py-2 text-sm font-medium text-white/90 backdrop-blur-sm"
+                  >
+                    <item.icon className="h-4 w-4 text-gold" />
+                    <span>{item.label}</span>
+                  </div>
+                ))}
+              </div>
+
+              <div
+                className="animate-in fade-in slide-in-from-bottom-4 flex flex-wrap gap-4"
+                style={{ animationDuration: "700ms", animationDelay: "300ms", animationFillMode: "backwards" }}
+              >
+                <Button asChild size="lg" className="bg-primary px-6 text-primary-foreground hover:bg-primary/90">
+                  <Link href="/products">{t.hero.cta}</Link>
+                </Button>
+                <Button
+                  asChild
+                  size="lg"
+                  variant="outline"
+                  className="border-white/25 bg-white/5 px-6 text-white hover:bg-white/10 hover:text-white"
+                >
+                  <Link href="/request">
+                    {t.hero.ctaSecondary}
+                    <ArrowRight className="ml-2 h-4 w-4" />
+                  </Link>
+                </Button>
+              </div>
             </div>
 
-            <h1
-              key={`title-${current}`}
-              className="animate-in fade-in slide-in-from-bottom-4 mb-5 max-w-xl text-balance text-4xl font-bold leading-tight tracking-tight text-white md:text-5xl lg:text-6xl"
-              style={{ animationDuration: "700ms" }}
-            >
-              {titles[current]}
-            </h1>
-
-            <p
-              key={`sub-${current}`}
-              className="animate-in fade-in slide-in-from-bottom-4 mb-8 max-w-xl text-pretty text-base leading-relaxed text-white/78 md:text-lg"
-              style={{ animationDuration: "700ms", animationDelay: "150ms", animationFillMode: "backwards" }}
-            >
-              {subs[current]}
-            </p>
-
-            <div
-              className="animate-in fade-in slide-in-from-bottom-4 flex flex-wrap gap-4"
-              style={{ animationDuration: "700ms", animationDelay: "300ms", animationFillMode: "backwards" }}
-            >
-              <Button asChild size="lg" className="bg-primary text-primary-foreground hover:bg-primary/90">
-                <Link href="/products">{t.hero.cta}</Link>
-              </Button>
-              <Button
-                asChild
-                size="lg"
-                variant="outline"
-                className="border-white/30 bg-transparent text-white hover:bg-white/10 hover:text-white"
-              >
-                <Link href="/request">{t.hero.ctaSecondary}</Link>
-              </Button>
+            <div className="animate-in fade-in slide-in-from-bottom-4 hidden lg:block" style={{ animationDuration: "700ms", animationDelay: "380ms", animationFillMode: "backwards" }}>
+              <div className="rounded-[28px] border border-white/15 bg-white/10 p-6 text-white shadow-2xl backdrop-blur-md">
+                <p className="mb-3 text-xs font-semibold uppercase tracking-[0.28em] text-gold">
+                  Regional Focus
+                </p>
+                <h3 className="mb-5 text-2xl font-semibold leading-tight">
+                  Trade execution built for premium Middle East retail and wholesale channels.
+                </h3>
+                <div className="space-y-4 border-t border-white/10 pt-5 text-sm text-white/80">
+                  <div className="flex items-center justify-between gap-4">
+                    <span>Primary Hub</span>
+                    <span className="font-semibold text-white">Dubai, UAE</span>
+                  </div>
+                  <div className="flex items-center justify-between gap-4">
+                    <span>Programs</span>
+                    <span className="font-semibold text-white">FCL / LCL / Mixed Loads</span>
+                  </div>
+                  <div className="flex items-center justify-between gap-4">
+                    <span>Contact</span>
+                    <span className="font-semibold text-white">{siteConfig.contact.phone}</span>
+                  </div>
+                </div>
+              </div>
             </div>
           </div>
         </div>
       </div>
 
-      {/* Arrows */}
       <button
         onClick={prev}
-        className="absolute left-4 top-1/2 z-20 flex h-12 w-12 -translate-y-1/2 items-center justify-center rounded-full bg-white/10 text-white backdrop-blur-sm transition-colors hover:bg-white/20"
+        className="absolute left-4 top-1/2 z-20 flex h-12 w-12 -translate-y-1/2 items-center justify-center rounded-full border border-white/15 bg-white/10 text-white backdrop-blur-sm transition-colors hover:bg-white/20"
         aria-label="Previous slide"
       >
         <ChevronLeft className="h-6 w-6" />
       </button>
       <button
         onClick={next}
-        className="absolute right-4 top-1/2 z-20 flex h-12 w-12 -translate-y-1/2 items-center justify-center rounded-full bg-white/10 text-white backdrop-blur-sm transition-colors hover:bg-white/20"
+        className="absolute right-4 top-1/2 z-20 flex h-12 w-12 -translate-y-1/2 items-center justify-center rounded-full border border-white/15 bg-white/10 text-white backdrop-blur-sm transition-colors hover:bg-white/20"
         aria-label="Next slide"
       >
         <ChevronRight className="h-6 w-6" />
       </button>
 
-      {/* Dots */}
       <div className="absolute bottom-8 left-1/2 z-20 flex -translate-x-1/2 gap-3">
         {slides.map((_, i) => (
           <button

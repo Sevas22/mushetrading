@@ -1,14 +1,14 @@
 export const siteConfig = {
-  name: "Mercaderus Trading",
-  shortName: "Mercaderus",
-  tagline: "Food Export Logistics",
+  name: "Jibala Trading",
+  shortName: "Jibala",
+  tagline: "Middle East Trade & Supply",
   description:
-    "U.S.-focused trading company specialized in food export, container programs, sourcing coordination, and logistics support for importers, distributors, wholesalers, and retail chains.",
-  url: "https://mercaderustrading.com",
+    "Premium trading company specialized in sourcing, export coordination, private label programs, and logistics support for distributors, wholesalers, and retail buyers across the Middle East.",
+  url: "https://jibalatrading.com",
   contact: {
-    phone: "+1 (305) 555-0148",
-    email: "sales@mercaderustrading.com",
-    addressLine1: "Miami Trade Center, Suite 210",
-    addressLine2: "Miami, Florida, USA",
+    phone: "+971 4 555 0182",
+    email: "sales@jibalatrading.com",
+    addressLine1: "Dubai Trade Centre, Office 402",
+    addressLine2: "Dubai, United Arab Emirates",
   },
 } as const

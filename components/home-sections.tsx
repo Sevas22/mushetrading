@@ -2,14 +2,13 @@
 
 import Link from "next/link"
 import {
-  Award,
-  Users,
-  Lightbulb,
+  ArrowRight,
+  Building2,
+  Crown,
   Globe,
+  Landmark,
   ShieldCheck,
   Truck,
-  Clock,
-  DollarSign,
   Cookie,
   Coffee,
   Package,
@@ -22,47 +21,45 @@ import {
 import { Card, CardContent } from "@/components/ui/card"
 import { Button } from "@/components/ui/button"
 import { useLanguage } from "@/contexts/language-context"
+import { siteConfig } from "@/lib/site-config"
 
-// ── Value Propositions ──────────────────────────────────────────────
 export function ValuesSection() {
   const { t } = useLanguage()
 
   const values = [
     {
-      icon: Award,
+      icon: "/brand/icon-sourcing.svg",
       title: t.values.quality,
       desc: t.values.qualityDesc,
-      iconClass: "bg-primary/12 text-primary",
-      cardClass: "border-primary/15 bg-white/80",
+      cardClass: "border-primary/15 bg-white/85",
     },
     {
-      icon: Users,
+      icon: "/brand/icon-quality.svg",
       title: t.values.focus,
       desc: t.values.focusDesc,
-      iconClass: "bg-accent/12 text-accent",
-      cardClass: "border-accent/15 bg-white/80",
+      cardClass: "border-gold/20 bg-white/85",
     },
     {
-      icon: Lightbulb,
+      icon: "/brand/icon-logistics.svg",
       title: t.values.innovation,
       desc: t.values.innovationDesc,
-      iconClass: "bg-sky-500/12 text-sky-700",
-      cardClass: "border-sky-500/15 bg-white/80",
+      cardClass: "border-primary/15 bg-white/85",
     },
     {
-      icon: Globe,
+      icon: "/brand/icon-market.svg",
       title: t.values.global,
       desc: t.values.globalDesc,
-      iconClass: "bg-amber-500/12 text-amber-700",
-      cardClass: "border-amber-500/15 bg-white/80",
+      cardClass: "border-gold/20 bg-white/85",
     },
   ]
 
   return (
-    <section className="bg-gradient-to-b from-secondary via-secondary to-background py-20">
+    <section className="bg-gradient-to-b from-secondary/80 via-background to-background py-20">
       <div className="mx-auto max-w-7xl px-4 lg:px-8">
-        <div className="mb-12 text-center">
-          <div className="mx-auto mb-4 h-1 w-12 bg-gold" />
+        <div className="mb-12 flex flex-col items-center text-center">
+          <div className="mb-4 inline-flex rounded-full border border-primary/10 bg-primary/5 px-4 py-1.5 text-xs font-semibold uppercase tracking-[0.24em] text-primary">
+            Core strengths
+          </div>
           <h2 className="text-balance text-3xl font-bold tracking-tight text-foreground md:text-4xl">
             {t.values.title}
           </h2>
@@ -71,11 +68,11 @@ export function ValuesSection() {
           {values.map((v, i) => (
             <Card
               key={i}
-              className={`border shadow-md backdrop-blur transition-shadow hover:shadow-lg ${v.cardClass}`}
+              className={`overflow-hidden border shadow-sm backdrop-blur transition-all hover:-translate-y-1 hover:shadow-xl ${v.cardClass}`}
             >
               <CardContent className="flex flex-col items-center p-8 text-center">
-                <div className={`mb-4 flex h-16 w-16 items-center justify-center rounded-full ${v.iconClass}`}>
-                  <v.icon className="h-8 w-8" />
+                <div className="mb-5 flex h-18 w-18 items-center justify-center rounded-2xl bg-secondary/60 p-3 shadow-sm">
+                  <img src={v.icon} alt={v.title} className="h-16 w-16" />
                 </div>
                 <h3 className="mb-2 text-lg font-semibold text-foreground">{v.title}</h3>
                 <p className="text-sm leading-relaxed text-muted-foreground">{v.desc}</p>
@@ -88,38 +85,46 @@ export function ValuesSection() {
   )
 }
 
-// ── About Section ───────────────────────────────────────────────────
 export function AboutSection() {
   const { t } = useLanguage()
 
   const stats = [
-    { value: "20+", label: t.about.yearsExp },
-    { value: "12+", label: t.about.countries },
-    { value: "40+", label: t.about.products },
-    { value: "FCL / LCL", label: t.about.clients },
+    { value: "08+", label: t.about.yearsExp },
+    { value: "06", label: t.about.countries },
+    { value: "30+", label: t.about.products },
+    { value: "24/7", label: t.about.clients },
+  ]
+
+  const pillars = [
+    "Premium retail packaging",
+    "Mixed container planning",
+    "Regional buyer alignment",
   ]
 
   return (
     <section className="relative overflow-hidden bg-background py-20">
-      <div className="absolute inset-0 bg-[radial-gradient(circle_at_top_left,rgba(11,45,107,0.08),transparent_35%),radial-gradient(circle_at_bottom_right,rgba(200,31,50,0.08),transparent_30%)]" />
+      <div className="absolute inset-0 bg-[radial-gradient(circle_at_top_left,rgba(15,92,77,0.08),transparent_35%),radial-gradient(circle_at_bottom_right,rgba(199,157,71,0.12),transparent_30%)]" />
       <div className="mx-auto max-w-7xl px-4 lg:px-8">
         <div className="relative flex flex-col items-center gap-12 lg:flex-row lg:gap-16">
-          {/* Image */}
           <div className="relative w-full lg:w-1/2">
-            <div className="overflow-hidden rounded-2xl">
+            <div className="overflow-hidden rounded-[28px] border border-border/70 bg-secondary/40 shadow-2xl">
               <img
-                src="https://images.unsplash.com/photo-1519003722824-194d4455a60c?auto=format&fit=crop&w=1200&q=80"
-                alt="Mercaderus Trading food export and logistics operations"
-                className="h-[400px] w-full object-cover"
+                src="https://images.unsplash.com/photo-1520607162513-77705c0f0d4a?auto=format&fit=crop&w=1400&q=80"
+                alt="Professional sourcing and export coordination meeting"
+                className="h-[460px] w-full object-cover"
               />
             </div>
-            {/* Decorative overlay */}
-            <div className="absolute -bottom-4 -right-4 -z-10 h-full w-full rounded-2xl bg-gold/20" />
+            <div className="absolute -bottom-5 -right-5 rounded-3xl border border-primary/10 bg-card/90 p-5 shadow-xl">
+              <p className="text-xs font-semibold uppercase tracking-[0.28em] text-primary">Trade Hub</p>
+              <p className="mt-2 text-lg font-semibold text-foreground">Dubai, UAE</p>
+              <p className="mt-1 text-sm text-muted-foreground">Premium sourcing and distribution coordination.</p>
+            </div>
           </div>
 
-          {/* Text */}
           <div className="w-full lg:w-1/2">
-            <div className="mb-4 h-1 w-12 bg-gold" />
+            <div className="mb-4 inline-flex rounded-full border border-gold/30 bg-gold/10 px-4 py-1.5 text-xs font-semibold uppercase tracking-[0.24em] text-primary">
+              Brand profile
+            </div>
             <h2 className="mb-2 text-3xl font-bold tracking-tight text-foreground md:text-4xl">
               {t.about.title}
             </h2>
@@ -127,7 +132,17 @@ export function AboutSection() {
             <p className="mb-4 leading-relaxed text-muted-foreground">{t.about.p1}</p>
             <p className="mb-8 leading-relaxed text-muted-foreground">{t.about.p2}</p>
 
-            {/* Stats */}
+            <div className="mb-8 flex flex-wrap gap-3">
+              {pillars.map((pillar) => (
+                <div
+                  key={pillar}
+                  className="rounded-full border border-primary/10 bg-card px-4 py-2 text-sm font-medium text-foreground shadow-sm"
+                >
+                  {pillar}
+                </div>
+              ))}
+            </div>
+
             <div className="mb-8 grid grid-cols-2 gap-4">
               {stats.map((s, i) => (
                 <div key={i} className="rounded-2xl border border-primary/10 bg-white/80 p-4 shadow-sm">
@@ -147,27 +162,28 @@ export function AboutSection() {
   )
 }
 
-// ── Categories Section ──────────────────────────────────────────────
 export function CategoriesSection() {
   const { t } = useLanguage()
 
   const categories = [
-    { icon: Cookie, label: t.categories.snacks, color: "bg-orange-50 text-orange-600" },
-    { icon: Coffee, label: t.categories.beverages, color: "bg-amber-50 text-amber-700" },
-    { icon: Package, label: t.categories.canned, color: "bg-blue-50 text-blue-600" },
-    { icon: Leaf, label: t.categories.produce, color: "bg-emerald-50 text-emerald-600" },
-    { icon: Wheat, label: t.categories.grains, color: "bg-yellow-50 text-yellow-700" },
-    { icon: Flame, label: t.categories.spices, color: "bg-red-50 text-red-600" },
-    { icon: Milk, label: t.categories.dairy, color: "bg-sky-50 text-sky-600" },
-    { icon: UtensilsCrossed, label: t.categories.sauces, color: "bg-rose-50 text-rose-600" },
+    { icon: Cookie, label: t.categories.snacks, color: "bg-[#fff1db] text-[#a45e11]" },
+    { icon: Coffee, label: t.categories.beverages, color: "bg-[#f8edcf] text-[#8c641d]" },
+    { icon: Package, label: t.categories.canned, color: "bg-[#e2f0ea] text-[#155a4b]" },
+    { icon: Leaf, label: t.categories.produce, color: "bg-[#e5f2e4] text-[#3c7a44]" },
+    { icon: Wheat, label: t.categories.grains, color: "bg-[#f5efd9] text-[#8b6d1a]" },
+    { icon: Flame, label: t.categories.spices, color: "bg-[#fff0e5] text-[#b85b16]" },
+    { icon: Milk, label: t.categories.dairy, color: "bg-[#edf5f3] text-[#216c66]" },
+    { icon: UtensilsCrossed, label: t.categories.sauces, color: "bg-[#f2ebdf] text-[#5e4937]" },
   ]
 
   return (
     <section className="relative overflow-hidden bg-navy py-20 text-white">
-      <div className="absolute inset-0 bg-[radial-gradient(circle_at_top_right,rgba(200,31,50,0.18),transparent_25%),radial-gradient(circle_at_bottom_left,rgba(255,255,255,0.08),transparent_30%)]" />
+      <div className="absolute inset-0 bg-[radial-gradient(circle_at_top_right,rgba(199,157,71,0.24),transparent_25%),radial-gradient(circle_at_bottom_left,rgba(255,255,255,0.08),transparent_30%)]" />
       <div className="mx-auto max-w-7xl px-4 lg:px-8">
         <div className="relative mb-12 text-center">
-          <div className="mx-auto mb-4 h-1 w-12 bg-gold" />
+          <div className="mx-auto mb-4 inline-flex rounded-full border border-white/10 bg-white/5 px-4 py-1.5 text-xs font-semibold uppercase tracking-[0.24em] text-gold">
+            Product lines
+          </div>
           <h2 className="mb-3 text-balance text-3xl font-bold tracking-tight text-white md:text-4xl">
             {t.categories.title}
           </h2>
@@ -176,7 +192,7 @@ export function CategoriesSection() {
         <div className="relative grid grid-cols-2 gap-4 sm:grid-cols-3 lg:grid-cols-4">
           {categories.map((cat, i) => (
             <Link key={i} href="/products">
-              <Card className="group cursor-pointer border border-white/10 bg-white/8 shadow-sm backdrop-blur transition-all hover:-translate-y-1 hover:border-white/20 hover:bg-white/12 hover:shadow-lg">
+              <Card className="group cursor-pointer border border-white/10 bg-white/10 shadow-sm backdrop-blur transition-all hover:-translate-y-1 hover:border-gold/30 hover:bg-white/12 hover:shadow-lg">
                 <CardContent className="flex flex-col items-center gap-3 p-6 text-center">
                   <div className={`flex h-14 w-14 items-center justify-center rounded-xl ${cat.color}`}>
                     <cat.icon className="h-7 w-7" />
@@ -192,23 +208,24 @@ export function CategoriesSection() {
   )
 }
 
-// ── Why Choose Us ───────────────────────────────────────────────────
 export function WhyChooseSection() {
   const { t } = useLanguage()
 
   const features = [
-    { icon: Clock, title: t.whyChoose.experience, desc: t.whyChoose.experienceDesc },
-    { icon: ShieldCheck, title: t.whyChoose.qualityAssurance, desc: t.whyChoose.qualityAssuranceDesc },
-    { icon: Truck, title: t.whyChoose.reliableService, desc: t.whyChoose.reliableServiceDesc },
-    { icon: DollarSign, title: t.whyChoose.competitivePricing, desc: t.whyChoose.competitivePricingDesc },
+    { icon: "/brand/icon-market.svg", title: t.whyChoose.experience, desc: t.whyChoose.experienceDesc },
+    { icon: "/brand/icon-quality.svg", title: t.whyChoose.qualityAssurance, desc: t.whyChoose.qualityAssuranceDesc },
+    { icon: "/brand/icon-logistics.svg", title: t.whyChoose.reliableService, desc: t.whyChoose.reliableServiceDesc },
+    { icon: "/brand/icon-sourcing.svg", title: t.whyChoose.competitivePricing, desc: t.whyChoose.competitivePricingDesc },
   ]
 
   return (
     <section className="relative overflow-hidden bg-gradient-to-b from-background via-secondary/50 to-background py-20">
-      <div className="absolute inset-0 bg-[radial-gradient(circle_at_top_center,rgba(11,45,107,0.08),transparent_28%),radial-gradient(circle_at_bottom_right,rgba(200,31,50,0.08),transparent_25%)]" />
+      <div className="absolute inset-0 bg-[radial-gradient(circle_at_top_center,rgba(15,92,77,0.08),transparent_28%),radial-gradient(circle_at_bottom_right,rgba(199,157,71,0.08),transparent_25%)]" />
       <div className="mx-auto max-w-7xl px-4 lg:px-8">
         <div className="relative mb-12 text-center">
-          <div className="mx-auto mb-4 h-1 w-12 bg-gold" />
+          <div className="mx-auto mb-4 inline-flex rounded-full border border-primary/10 bg-primary/5 px-4 py-1.5 text-xs font-semibold uppercase tracking-[0.24em] text-primary">
+            Why Jibala
+          </div>
           <h2 className="mb-3 text-balance text-3xl font-bold tracking-tight text-foreground md:text-4xl">
             {t.whyChoose.title}
           </h2>
@@ -218,10 +235,10 @@ export function WhyChooseSection() {
           {features.map((f, i) => (
             <div
               key={i}
-              className="flex gap-5 rounded-2xl border border-primary/10 bg-white/80 p-6 shadow-sm backdrop-blur transition-shadow hover:shadow-md"
+              className="flex gap-5 rounded-2xl border border-primary/10 bg-white/80 p-6 shadow-sm backdrop-blur transition-all hover:-translate-y-1 hover:shadow-xl"
             >
-              <div className="flex h-14 w-14 shrink-0 items-center justify-center rounded-xl bg-gold/10">
-                <f.icon className="h-7 w-7 text-gold" />
+              <div className="flex h-16 w-16 shrink-0 items-center justify-center rounded-2xl bg-secondary/70 p-2">
+                <img src={f.icon} alt={f.title} className="h-14 w-14" />
               </div>
               <div>
                 <h3 className="mb-1 text-lg font-semibold text-foreground">{f.title}</h3>
@@ -235,41 +252,43 @@ export function WhyChooseSection() {
   )
 }
 
-// ── Countries Section ───────────────────────────────────────────────
 export function CountriesSection() {
   const { t } = useLanguage()
 
-  const countries = [
-    { name: "Miami", flag: "MIA" },
-    { name: "Houston", flag: "HOU" },
-    { name: "Los Angeles", flag: "LAX" },
-    { name: "New Jersey", flag: "EWR" },
-    { name: "Importers", flag: "IMP" },
-    { name: "Distributors", flag: "DST" },
-    { name: "Retail Chains", flag: "RTL" },
-    { name: "Food Service", flag: "FS" },
+  const markets = [
+    { name: "United Arab Emirates", code: "UAE", icon: Landmark },
+    { name: "Saudi Arabia", code: "KSA", icon: Crown },
+    { name: "Qatar", code: "QAT", icon: Building2 },
+    { name: "Kuwait", code: "KWT", icon: ShieldCheck },
+    { name: "Oman", code: "OMN", icon: Globe },
+    { name: "Bahrain", code: "BHR", icon: Crown },
+    { name: "Jordan", code: "JOR", icon: Landmark },
+    { name: "Iraq", code: "IRQ", icon: Truck },
   ]
 
   return (
-    <section className="bg-gradient-to-br from-primary via-navy to-primary py-20 text-white">
+    <section className="bg-[linear-gradient(135deg,#10353a_0%,#0d4d44_55%,#c79d47_100%)] py-20 text-white">
       <div className="mx-auto max-w-7xl px-4 lg:px-8">
         <div className="mb-12 text-center">
-          <div className="mx-auto mb-4 h-1 w-12 bg-white/80" />
+          <div className="mx-auto mb-4 inline-flex rounded-full border border-white/15 bg-white/8 px-4 py-1.5 text-xs font-semibold uppercase tracking-[0.24em] text-white/90">
+            Focus markets
+          </div>
           <h2 className="mb-3 text-balance text-3xl font-bold tracking-tight text-white md:text-4xl">
             {t.countries.title}
           </h2>
           <p className="text-white/75">{t.countries.subtitle}</p>
         </div>
         <div className="grid grid-cols-2 gap-3 sm:grid-cols-4 lg:grid-cols-4">
-          {countries.map((c, i) => (
+          {markets.map((market, i) => (
             <div
               key={i}
-              className="flex flex-col items-center gap-2 rounded-xl border border-white/10 bg-white/10 p-4 shadow-sm backdrop-blur transition-shadow hover:bg-white/15 hover:shadow-md"
+              className="flex flex-col items-center gap-3 rounded-2xl border border-white/10 bg-white/10 p-5 text-center shadow-sm backdrop-blur transition-shadow hover:bg-white/15 hover:shadow-md"
             >
               <span className="flex h-12 w-12 items-center justify-center rounded-full bg-white/15 text-sm font-bold text-white">
-                {c.flag}
+                <market.icon className="h-5 w-5" />
               </span>
-              <span className="text-center text-xs font-medium text-white">{c.name}</span>
+              <span className="text-xs font-semibold uppercase tracking-[0.24em] text-gold">{market.code}</span>
+              <span className="text-center text-sm font-medium text-white">{market.name}</span>
             </div>
           ))}
         </div>
@@ -278,13 +297,11 @@ export function CountriesSection() {
   )
 }
 
-// ── CTA Banner ──────────────────────────────────────────────────────
 export function CTABanner() {
   const { t } = useLanguage()
 
   return (
-    <section className="relative overflow-hidden bg-[linear-gradient(135deg,#0b2d6b_0%,#153f8b_55%,#c81f32_100%)] py-20">
-      {/* Decorative pattern */}
+    <section className="relative overflow-hidden bg-[linear-gradient(135deg,#0b2628_0%,#0f5c4d_52%,#c79d47_100%)] py-20">
       <div className="absolute inset-0 opacity-15">
         <div className="absolute -right-20 -top-20 h-80 w-80 rounded-full border-[40px] border-white" />
         <div className="absolute -bottom-20 -left-20 h-60 w-60 rounded-full border-[30px] border-white" />
@@ -301,13 +318,16 @@ export function CTABanner() {
           <Button
             asChild
             size="lg"
-            className="bg-gold text-white hover:bg-gold/90"
+            className="bg-gold text-navy hover:bg-gold/90"
           >
-            <Link href="/request">{t.cta.button}</Link>
+            <Link href="/request">
+              {t.cta.button}
+              <ArrowRight className="ml-2 h-4 w-4" />
+            </Link>
           </Button>
           <p className="text-sm text-primary-foreground/70">
             {t.cta.call}{" "}
-            <span className="font-semibold text-primary-foreground">+1 (305) 555-0148</span>
+            <span className="font-semibold text-primary-foreground">{siteConfig.contact.phone}</span>
           </p>
         </div>
       </div>

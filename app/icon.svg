@@ -1,6 +1,22 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64">
-  <rect x="2" y="2" width="60" height="60" rx="16" fill="#0B2D6B" />
-  <path d="M11 48V14h16l9 10 9-10h8v34H41V28L32 38l-9-10v20H11Z" fill="#FFFFFF" />
-  <path d="M27 54c-6-8-6-16 1-23l16-17h9L37 31c-3 3-4 6-4 11v12h-6Z" fill="#C81F32" />
-  <path d="M33 10l2 6h6l-5 3.5 2 6-5-3.5-5 3.5 2-6-5-3.5h6l2-6Z" fill="#D2A64A" />
+  <rect x="2" y="2" width="60" height="60" rx="16" fill="#143B3B" />
+  <path
+    d="M10 18H34V23H26V40C26 48 21 53 14 53C10 53 7 51 5 49L9 44C10 45 12 47 14 47C17 47 19 45 19 41V23H10V18Z"
+    fill="#DCEEEF"
+  />
+  <path
+    d="M30 18H54V23H45V52H39V23H30V18Z"
+    fill="#14A06F"
+  />
+  <path
+    d="M42 52H36V35C36 27 40 21 50 18L51 23C44 25 42 29 42 35V52Z"
+    fill="#14A06F"
+  />
+  <path
+    d="M28 9L31 14H37L32.5 17.5L34 23L28 20L22 23L23.5 17.5L19 14H25L28 9Z"
+    fill="none"
+    stroke="#C79D47"
+    stroke-width="2.5"
+    stroke-linejoin="round"
+  />
 </svg>

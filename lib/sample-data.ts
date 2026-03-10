@@ -7,7 +7,7 @@ export const sampleCatalogProducts: Product[] = [
     price: 32,
     category: "Rice & Grains",
     description:
-      "Export-grade jasmine rice selected for importers, distributors, and ethnic grocery channels in the U.S. Available in retail and wholesale bag formats.",
+      "Export-grade jasmine rice selected for distributors, hospitality groups, and specialty grocery channels across the GCC. Available in retail and wholesale bag formats.",
     image: "https://images.unsplash.com/photo-1586201375761-83865001e31c?auto=format&fit=crop&w=1200&q=80",
     type: "catalog",
     specifications: {
@@ -116,7 +116,7 @@ export const sampleCatalogProducts: Product[] = [
       Support: "Documentation and packing list",
       Loading: "Container planning support",
       Labeling: "Retail and wholesale formats",
-      Market: "USA import programs",
+      Market: "GCC retail programs",
       Program: "Recurring or seasonal",
     },
     createdAt: "2024-03-01",

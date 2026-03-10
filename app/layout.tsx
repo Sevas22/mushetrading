@@ -16,18 +16,18 @@ export const metadata: Metadata = {
   description: siteConfig.description,
   generator: "v0.app",
   keywords: [
-    "Mercaderus Trading",
-    "food export USA",
-    "container logistics",
-    "food distributor supplier",
-    "wholesale food trading",
-    "import export logistics",
-    "private label food export",
+    "Jibala Trading",
+    "Middle East trade company",
+    "GCC import export",
+    "Dubai sourcing partner",
+    "private label export",
+    "food distribution Middle East",
+    "container logistics GCC",
   ],
 }
 
 export const viewport: Viewport = {
-  themeColor: "#0B2D6B",
+  themeColor: "#0F5C4D",
 }
 
 export default function RootLayout({

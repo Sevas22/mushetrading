@@ -40,7 +40,7 @@ export function Navbar() {
     <header
       className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
         scrolled || !isHome
-          ? "bg-card/95 backdrop-blur-md shadow-md"
+          ? "border-b border-border/80 bg-background/92 shadow-sm backdrop-blur-md"
           : "bg-transparent"
       }`}
     >
@@ -56,11 +56,11 @@ export function Navbar() {
             <Link
               key={link.href}
               href={link.href}
-              className={`rounded-md px-4 py-2 text-sm font-medium transition-colors ${
+              className={`rounded-full px-4 py-2 text-sm font-medium transition-colors ${
                 isActive(link.href)
                   ? scrolled || !isHome
-                    ? "bg-primary text-primary-foreground"
-                    : "bg-white/20 text-white"
+                    ? "bg-primary text-primary-foreground shadow-sm"
+                    : "bg-white/15 text-white backdrop-blur-sm"
                   : scrolled || !isHome
                     ? "text-foreground hover:bg-secondary"
                     : "text-white/90 hover:bg-white/10 hover:text-white"
@@ -77,7 +77,7 @@ export function Navbar() {
             variant="ghost"
             size="sm"
             onClick={toggleLanguage}
-            className={`flex items-center gap-1.5 text-xs font-semibold transition-colors ${
+            className={`flex items-center gap-1.5 rounded-full text-xs font-semibold transition-colors ${
               scrolled || !isHome
                 ? "text-foreground hover:bg-secondary"
                 : "text-white hover:bg-white/10"
@@ -93,7 +93,7 @@ export function Navbar() {
               <Button
                 variant="ghost"
                 size="icon"
-                className={`md:hidden ${
+                className={`rounded-full md:hidden ${
                   scrolled || !isHome ? "text-foreground" : "text-white"
                 }`}
               >
@@ -101,7 +101,7 @@ export function Navbar() {
                 <span className="sr-only">Toggle menu</span>
               </Button>
             </SheetTrigger>
-            <SheetContent side="right" className="w-72 bg-card">
+            <SheetContent side="right" className="w-72 border-l border-border bg-card">
               <SheetTitle className="sr-only">Navigation Menu</SheetTitle>
               <div className="flex flex-col gap-1 pt-8">
                 {navLinks.map((link) => (
