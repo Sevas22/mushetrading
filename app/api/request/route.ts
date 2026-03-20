@@ -30,7 +30,7 @@ export async function POST(request: Request) {
 
     // In production, integrate an email service here, e.g.:
     // await resend.emails.send({
-    //   from: 'Mercaderus Trading <noreply@mercaderustrading.com>',
+    //   from: 'MUSHE Trading <noreply@mercaderustrading.com>',
     //   to: ['sales@mercaderustrading.com'],
     //   subject: `New Product Request from ${fullName}`,
     //   html: `...email template...`,

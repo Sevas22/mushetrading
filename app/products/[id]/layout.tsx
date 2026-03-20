@@ -1,0 +1,30 @@
+import type { Metadata } from "next"
+import type { ReactNode } from "react"
+import { getProductById } from "@/lib/products-store"
+import { seo } from "@/lib/seo"
+
+type Props = { children: ReactNode; params: Promise<{ id: string }> }
+
+export async function generateMetadata({ params }: Props): Promise<Metadata> {
+  const { id } = await params
+  const product = getProductById(id)
+
+  if (!product || product.type !== "catalog") {
+    return {
+      title: "Product",
+      description: seo.wholesale.description,
+    }
+  }
+
+  const { title, description } = seo.productWholesale(product.name, product.description)
+
+  return {
+    title,
+    description,
+    openGraph: { title, description },
+  }
+}
+
+export default function ProductDetailLayout({ children }: { children: ReactNode }) {
+  return children
+}

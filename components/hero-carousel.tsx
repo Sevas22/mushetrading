@@ -64,14 +64,10 @@ export function HeroCarousel() {
         </div>
       ))}
 
-      {/* Content */}
-      <div className="relative z-10 flex h-full items-center">
+      {/* Content — padding-top clears fixed transparent navbar so text never sits under logo/tagline */}
+      <div className="relative z-10 flex h-full items-center pt-24 pb-8 md:pt-28 md:pb-12 lg:pt-32">
         <div className="mx-auto w-full max-w-7xl px-4 lg:px-8">
           <div className="max-w-2xl">
-            <div className="mb-4 inline-flex rounded-full border border-white/15 bg-white/10 px-4 py-1.5 text-xs font-semibold uppercase tracking-[0.24em] text-white/90 backdrop-blur-sm">
-              USA food export and logistics
-            </div>
-
             <h1
               key={`title-${current}`}
               className="animate-in fade-in slide-in-from-bottom-4 mb-5 max-w-xl text-balance text-4xl font-bold leading-tight tracking-tight text-white md:text-5xl lg:text-6xl"
