@@ -151,6 +151,11 @@ export const translations = {
       quantityPlaceholder: "e.g. 1 container, 500 cartons, monthly program...",
       messagePlaceholder: "Tell us about your target products, packaging, destinations, certifications, or container requirements...",
     },
+    matchmakingPage: {
+      title: "Business Matchmaking",
+      subtitle: "Connect with curated suppliers and buyers aligned with your category, volume, and target market requirements.",
+      cta: "Start Matchmaking",
+    },
     footer: {
       description:
         "China-focused trading company specialized in premium sourcing, private label programs, compliance support, and logistics coordination.",
@@ -348,6 +353,11 @@ export const translations = {
       productPlaceholder: "例如：茉莉香米、金枪鱼罐头、混装柜...",
       quantityPlaceholder: "例如：1 个集装箱、500 箱、月度计划...",
       messagePlaceholder: "请告知目标产品、包装、目的地、认证或装柜需求...",
+    },
+    matchmakingPage: {
+      title: "商务对接",
+      subtitle: "按您的品类、体量与目标市场需求，对接经过筛选的供应商与买家资源。",
+      cta: "开始对接",
     },
     footer: {
       description:
