@@ -9,6 +9,7 @@ import { Button } from "@/components/ui/button"
 import { Badge } from "@/components/ui/badge"
 import { Card, CardContent } from "@/components/ui/card"
 import { HeroBanner } from "@/components/hero-banner"
+import { SupplyCountriesSection } from "@/components/supply-countries"
 import { useLanguage } from "@/contexts/language-context"
 import { getProducts, getCategories } from "@/lib/products-store"
 import type { Product } from "@/lib/types"
@@ -43,6 +44,8 @@ export default function StorePage() {
         subtitle={t.storePage.subtitle}
         image="/images/store-banner.svg"
       />
+
+      <SupplyCountriesSection />
 
       <section className="bg-background py-16">
         <div className="mx-auto max-w-7xl px-4 lg:px-8">
