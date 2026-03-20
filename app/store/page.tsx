@@ -41,11 +41,35 @@ export default function StorePage() {
       <HeroBanner
         title={t.storePage.title}
         subtitle={t.storePage.subtitle}
-        image="/brand/hero-market.svg"
+        image="/images/store-banner.svg"
       />
 
       <section className="bg-background py-16">
         <div className="mx-auto max-w-7xl px-4 lg:px-8">
+          <div className="mb-10 rounded-[28px] border border-primary/15 bg-gradient-to-r from-navy/95 to-navy/85 p-6 shadow-sm">
+            <p className="text-xs font-semibold uppercase tracking-[0.24em] text-gold">
+              {t.storePage.originEyebrow}
+            </p>
+            <h3 className="mt-2 text-2xl font-semibold text-white">{t.storePage.originTitle}</h3>
+            <div className="mt-5 flex flex-wrap gap-2">
+              {[
+                { flag: "/flags/colombia.svg", name: "Colombia" },
+                { flag: "/flags/chile.svg", name: "Chile" },
+                { flag: "/flags/peru.svg", name: "Peru" },
+                { flag: "/flags/ecuador.svg", name: "Ecuador" },
+                { flag: "/flags/brazil.svg", name: "Brasil" },
+              ].map((country) => (
+                <span
+                  key={country.name}
+                  className="inline-flex items-center gap-2 rounded-full border border-white/15 bg-white/10 px-3 py-1.5 text-sm font-medium text-white"
+                >
+                  <img src={country.flag} alt={`${country.name} flag`} className="h-4 w-6 rounded-[2px] object-cover" />
+                  {country.name}
+                </span>
+              ))}
+            </div>
+          </div>
+
           <div className="mb-10 rounded-[28px] border border-border/70 bg-card/85 p-5 shadow-sm backdrop-blur md:p-6">
             <div className="mb-5 flex flex-col gap-2 md:flex-row md:items-end md:justify-between">
               <div>

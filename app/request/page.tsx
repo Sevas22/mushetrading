@@ -117,7 +117,7 @@ function RequestPageContent() {
       <HeroBanner
         title={t.requestPage.title}
         subtitle={t.requestPage.subtitle}
-        image="/brand/hero-skyline.svg"
+        image="/images/rfq-banner.svg"
       />
 
       <section className="bg-background py-16">
@@ -306,7 +306,7 @@ export default function RequestPage() {
         <HeroBanner
           title={t.requestPage.title}
           subtitle={t.requestPage.subtitle}
-          image="/brand/hero-skyline.svg"
+          image="/images/rfq-banner.svg"
         />
       }
     >

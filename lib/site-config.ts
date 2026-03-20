@@ -1,5 +1,5 @@
 export const siteConfig = {
-  name: "MusheTrading",
+  name: "MUSHE TRADING",
   shortName: "Mushe",
   tagline: "China-Focused Export & Sourcing",
   description:

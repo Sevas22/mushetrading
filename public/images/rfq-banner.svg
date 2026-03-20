@@ -1,0 +1,38 @@
+<svg width="1920" height="1080" viewBox="0 0 1920 1080" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient id="rfqBg" x1="0" y1="0" x2="1920" y2="1080" gradientUnits="userSpaceOnUse">
+      <stop offset="0" stop-color="#101722"/>
+      <stop offset="0.55" stop-color="#1A2A3D"/>
+      <stop offset="1" stop-color="#213647"/>
+    </linearGradient>
+    <linearGradient id="rfqAccent" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#F3B84A" stop-opacity="0.45"/>
+      <stop offset="1" stop-color="#F3B84A" stop-opacity="0"/>
+    </linearGradient>
+  </defs>
+
+  <rect width="1920" height="1080" fill="url(#rfqBg)"/>
+  <circle cx="1600" cy="170" r="330" fill="url(#rfqAccent)"/>
+
+  <!-- Abstract form panels -->
+  <g opacity="0.95">
+    <rect x="1010" y="260" width="780" height="560" rx="30" fill="#2A3B4F" fill-opacity="0.75"/>
+    <rect x="1060" y="330" width="300" height="18" rx="8" fill="#AFC2D4"/>
+    <rect x="1060" y="370" width="530" height="14" rx="7" fill="#7F96AD"/>
+    <rect x="1060" y="430" width="660" height="56" rx="12" fill="#1F2D3B"/>
+    <rect x="1060" y="510" width="660" height="56" rx="12" fill="#1F2D3B"/>
+    <rect x="1060" y="590" width="660" height="110" rx="12" fill="#1F2D3B"/>
+    <rect x="1060" y="730" width="240" height="52" rx="12" fill="#D8A43E"/>
+  </g>
+
+  <!-- Grid lines -->
+  <g stroke="#4E6783" stroke-opacity="0.5" stroke-width="2">
+    <path d="M980 870 H1860"/>
+    <path d="M980 910 H1860"/>
+    <path d="M980 950 H1860"/>
+    <path d="M980 990 H1860"/>
+  </g>
+
+  <!-- Left safe area for text -->
+  <rect x="0" y="0" width="980" height="1080" fill="#070B12" fill-opacity="0.46"/>
+</svg>

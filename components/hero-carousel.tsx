@@ -125,22 +125,22 @@ export function HeroCarousel() {
             <div className="animate-in fade-in slide-in-from-bottom-4 hidden lg:block" style={{ animationDuration: "700ms", animationDelay: "380ms", animationFillMode: "backwards" }}>
               <div className="rounded-[28px] border border-white/15 bg-white/10 p-6 text-white shadow-2xl backdrop-blur-md">
                 <p className="mb-3 text-xs font-semibold uppercase tracking-[0.28em] text-gold">
-                  China Market Focus
+                  {t.hero.cardEyebrow}
                 </p>
                 <h3 className="mb-5 text-2xl font-semibold leading-tight">
-                  Trade execution built for modern Chinese retail, e-commerce, and wholesale channels.
+                  {t.hero.cardTitle}
                 </h3>
                 <div className="space-y-4 border-t border-white/10 pt-5 text-sm text-white/80">
                   <div className="flex items-center justify-between gap-4">
-                    <span>Primary Hub</span>
-                    <span className="font-semibold text-white">Shanghai, China</span>
+                    <span>{t.hero.cardPrimaryHub}</span>
+                    <span className="font-semibold text-white">{t.hero.cardPrimaryHubValue}</span>
                   </div>
                   <div className="flex items-center justify-between gap-4">
-                    <span>Programs</span>
-                    <span className="font-semibold text-white">FCL / LCL / Mixed Loads</span>
+                    <span>{t.hero.cardPrograms}</span>
+                    <span className="font-semibold text-white">{t.hero.cardProgramsValue}</span>
                   </div>
                   <div className="flex items-center justify-between gap-4">
-                    <span>Contact</span>
+                    <span>{t.hero.cardContact}</span>
                     <span className="font-semibold text-white">{siteConfig.contact.phone}</span>
                   </div>
                 </div>

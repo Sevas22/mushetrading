@@ -15,7 +15,7 @@ export function LanguageToggle() {
       className="flex items-center gap-1.5 text-xs font-semibold"
     >
       <Globe className="h-4 w-4" />
-      {language === "en" ? "Espanol" : "English"}
+      {language === "en" ? "中文" : "English"}
     </Button>
   )
 }

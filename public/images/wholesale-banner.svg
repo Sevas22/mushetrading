@@ -1,0 +1,44 @@
+<svg width="1920" height="1080" viewBox="0 0 1920 1080" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient id="whBg" x1="0" y1="0" x2="1920" y2="1080" gradientUnits="userSpaceOnUse">
+      <stop offset="0" stop-color="#0D1724"/>
+      <stop offset="0.55" stop-color="#143347"/>
+      <stop offset="1" stop-color="#1C4252"/>
+    </linearGradient>
+    <radialGradient id="whGlow" cx="0" cy="0" r="1" gradientUnits="userSpaceOnUse" gradientTransform="translate(1560 180) rotate(90) scale(330 450)">
+      <stop offset="0" stop-color="#F0B447" stop-opacity="0.4"/>
+      <stop offset="1" stop-color="#F0B447" stop-opacity="0"/>
+    </radialGradient>
+  </defs>
+
+  <rect width="1920" height="1080" fill="url(#whBg)"/>
+  <rect width="1920" height="1080" fill="url(#whGlow)"/>
+  <rect y="710" width="1920" height="370" fill="#091118" fill-opacity="0.52"/>
+
+  <!-- Port + wholesale crates -->
+  <g opacity="0.9">
+    <rect x="980" y="520" width="240" height="90" rx="10" fill="#B34A3B"/>
+    <rect x="1240" y="520" width="240" height="90" rx="10" fill="#D2943E"/>
+    <rect x="1500" y="520" width="240" height="90" rx="10" fill="#2F6384"/>
+    <rect x="1020" y="628" width="240" height="90" rx="10" fill="#355E79"/>
+    <rect x="1280" y="628" width="240" height="90" rx="10" fill="#A53F35"/>
+    <rect x="1540" y="628" width="240" height="90" rx="10" fill="#7C90A0"/>
+  </g>
+
+  <!-- Container crane silhouettes -->
+  <g stroke="#D6E1EA" stroke-opacity="0.35" stroke-width="8">
+    <path d="M980 760 L1080 430 L1180 760"/>
+    <path d="M1320 760 L1420 400 L1520 760"/>
+    <path d="M1660 760 L1760 440 L1860 760"/>
+  </g>
+
+  <!-- Product/freight info bars -->
+  <g opacity="0.88">
+    <rect x="1120" y="360" width="610" height="34" rx="12" fill="#1F3346"/>
+    <rect x="1120" y="410" width="520" height="28" rx="10" fill="#2A445A"/>
+    <rect x="1120" y="454" width="430" height="24" rx="10" fill="#35536E"/>
+  </g>
+
+  <!-- Left safe area -->
+  <rect x="0" y="0" width="980" height="1080" fill="#050B12" fill-opacity="0.43"/>
+</svg>

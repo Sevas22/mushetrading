@@ -12,7 +12,7 @@ export function Logo({ showWordmark = true, inverted = false }: LogoProps) {
             ? "/brand/jibala-logo-light.svg"
             : "/brand/jibala-logo.svg"
         }
-        alt="MusheTrading"
+        alt="MUSHE TRADING"
         className="h-11 w-auto shrink-0"
       />
     </div>

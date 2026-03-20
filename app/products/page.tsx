@@ -41,7 +41,7 @@ export default function ProductsPage() {
       <HeroBanner
         title={t.productsPage.title}
         subtitle={t.productsPage.subtitle}
-        image="/brand/hero-port.svg"
+        image="/images/wholesale-banner.svg"
       />
 
       <section className="bg-background py-16">

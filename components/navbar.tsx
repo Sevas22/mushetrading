@@ -69,6 +69,16 @@ export function Navbar() {
               {link.label}
             </Link>
           ))}
+          <Link
+            href="/request?service=business-matchmaking"
+            className={`ml-2 rounded-full border px-4 py-2 text-sm font-semibold transition-colors ${
+              scrolled || !isHome
+                ? "border-gold/40 bg-gold/15 text-gold hover:bg-gold/25"
+                : "border-gold/50 bg-gold/20 text-gold hover:bg-gold/30"
+            }`}
+          >
+            {t.nav.businessMatchmaking}
+          </Link>
         </div>
 
         {/* Right side: Language toggle + Mobile menu */}
@@ -84,7 +94,7 @@ export function Navbar() {
             }`}
           >
             <Globe className="h-4 w-4" />
-            {language === "en" ? "ES" : "EN"}
+            {language === "en" ? "中文" : "EN"}
           </Button>
 
           {/* Mobile menu */}
@@ -124,6 +134,13 @@ export function Navbar() {
                   className="mt-4 rounded-md border border-border px-4 py-3 text-center text-sm font-medium text-muted-foreground transition-colors hover:bg-secondary"
                 >
                   {t.nav.admin}
+                </Link>
+                <Link
+                  href="/request?service=business-matchmaking"
+                  onClick={() => setOpen(false)}
+                  className="mt-2 rounded-md border border-gold/40 bg-gold/15 px-4 py-3 text-center text-sm font-semibold text-gold transition-colors hover:bg-gold/25"
+                >
+                  {t.nav.businessMatchmaking}
                 </Link>
               </div>
             </SheetContent>
