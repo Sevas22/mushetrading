@@ -109,7 +109,7 @@ export function AboutSection() {
             <div className="overflow-hidden rounded-2xl">
               <img
                 src="https://images.unsplash.com/photo-1519003722824-194d4455a60c?auto=format&fit=crop&w=1200&q=80"
-                alt="MUSHE Trading food export and logistics operations"
+                alt="Mercaderus Trading food export and logistics operations"
                 className="h-[400px] w-full object-cover"
               />
             </div>

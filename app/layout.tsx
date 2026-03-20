@@ -22,7 +22,7 @@ export const metadata: Metadata = {
   description: seo.home.description,
   generator: "Next.js",
   keywords: [
-    "MUSHE Trading",
+    "Mercaderus Trading",
     "food export USA",
     "container logistics",
     "food distributor supplier",

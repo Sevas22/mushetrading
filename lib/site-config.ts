@@ -1,11 +1,11 @@
 export const siteConfig = {
   /** Full display name for metadata and footer */
-  name: "MUSHE Trading",
-  /** Wordmark: first part (visually separated from TRADING in the logo) */
-  brandMushe: "MUSHE",
+  name: "Mercaderus Trading",
+  /** Wordmark: first part (pipe + second line in logo) */
+  brandPrimary: "MERCADERUS",
   /** Wordmark: second part */
-  brandTrading: "TRADING",
-  shortName: "MUSHE",
+  brandSecondary: "TRADING",
+  shortName: "Mercaderus",
   tagline: "Food Export Logistics",
   description:
     "U.S.-focused trading company specialized in food export, container programs, sourcing coordination, and logistics support for importers, distributors, wholesalers, and retail chains.",

@@ -37,7 +37,7 @@ export function Navbar() {
 
   return (
     <header
-      className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
+      className={`fixed top-0 left-0 right-0 z-50 overflow-visible transition-all duration-300 ${
         scrolled || !isHome
           ? "bg-card/95 backdrop-blur-md shadow-md"
           : "bg-transparent"
@@ -45,7 +45,10 @@ export function Navbar() {
     >
       <nav className="mx-auto flex max-w-7xl items-center justify-between gap-4 px-4 py-3.5 lg:gap-6 lg:px-8">
         {/* Solo logo a la izquierda */}
-        <Link href="/" className="flex shrink-0 items-center gap-2">
+        <Link
+          href="/"
+          className="flex shrink-0 items-start gap-2 overflow-visible py-0.5"
+        >
           <Logo inverted={!scrolled && isHome} />
         </Link>
 
@@ -99,7 +102,7 @@ export function Navbar() {
             }`}
           >
             <Globe className="mr-1 h-4 w-4 sm:mr-1.5" />
-            {language === "en" ? "中文" : "EN"}
+            {language === "en" ? "FR" : "EN"}
           </Button>
 
           <Sheet open={open} onOpenChange={setOpen}>

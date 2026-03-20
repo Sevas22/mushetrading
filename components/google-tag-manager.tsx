@@ -1,7 +1,7 @@
 import Script from "next/script"
 
-/** Set NEXT_PUBLIC_GTM_ID in .env.local (default: GTM-M55CQZNG). GA4 / Meta Pixel se configuran en el contenedor GTM. */
-const GTM_ID = process.env.NEXT_PUBLIC_GTM_ID ?? "GTM-M55CQZNG"
+/** Set NEXT_PUBLIC_GTM_ID in .env.local (default: GTM-5NZXJ7NZ). GA4 / Meta Pixel se configuran en el contenedor GTM. */
+const GTM_ID = process.env.NEXT_PUBLIC_GTM_ID ?? "GTM-5NZXJ7NZ"
 
 export function GoogleTagManagerScript() {
   if (!GTM_ID) return null

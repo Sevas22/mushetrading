@@ -21,4 +21,4 @@ export interface ProductRequest {
   message?: string
 }
 
-export type Language = "en" | "zh"
+export type Language = "en" | "fr"

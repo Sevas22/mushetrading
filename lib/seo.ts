@@ -11,7 +11,7 @@ export const seo = {
     description: siteConfig.description,
   },
   wholesale: {
-    /** Segmento de título (resultado: "… | MUSHE") */
+    /** Segmento de título (resultado: "… | Mercaderus") */
     title: "Wholesale Food Export Catalog",
     description:
       "Browse export-ready food products: rice, canned goods, beverages, spices, and private label programs. Technical specs and logistics support for U.S. importers and distributors.",

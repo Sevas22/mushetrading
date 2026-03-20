@@ -7,13 +7,14 @@ interface LogoProps {
 
 /**
  * Layout (same everywhere: navbar hero, navbar scrolled, footer):
- * [icon]  MUSHE | TRADING
+ * [icon]  MERCADERUS | TRADING
  *         FOOD EXPORT LOGISTICS  (centered under the wordmark row)
  *         [red] [navy] [gold]
  */
 export function Logo({ showWordmark = true, inverted = false }: LogoProps) {
   const title = inverted ? "text-white" : "text-[#0B2D6B]"
-  const pipe = inverted ? "text-white/70" : "text-[#0B2D6B]/45"
+  /** Misma intensidad que el wordmark (referencia: barra y texto en blanco sólido) */
+  const pipe = inverted ? "text-white" : "text-[#0B2D6B]/80"
   const tagline = inverted ? "text-white" : "text-[#C81F32]"
 
   const iconShadow =
@@ -22,12 +23,14 @@ export function Logo({ showWordmark = true, inverted = false }: LogoProps) {
       : ""
 
   return (
-    <div className="flex items-center gap-3 sm:gap-3.5">
+    <div className="flex items-start gap-3 sm:gap-3.5">
+      {/* items-start: el icono alinea con la 1.ª línea del wordmark; items-center subía el SVG y recortaba arriba */}
       <svg
-        viewBox="0 0 110 110"
+        viewBox="-4 -4 118 118"
         aria-hidden="true"
-        className={`h-10 w-10 shrink-0 sm:h-11 sm:w-11 ${iconShadow}`}
+        className={`h-10 w-10 shrink-0 overflow-visible sm:h-11 sm:w-11 ${iconShadow}`}
         role="img"
+        preserveAspectRatio="xMidYMid meet"
       >
         <g transform="translate(5 5)">
           <path
@@ -44,21 +47,22 @@ export function Logo({ showWordmark = true, inverted = false }: LogoProps) {
 
       {showWordmark ? (
         <div className="flex min-w-0 flex-col items-center">
-          {/* One row: MUSHE | TRADING — pipe always visible, same on mobile */}
+          {/* One row: MERCADERUS | TRADING — pipe always visible */}
           <div
-            className={`flex w-max max-w-[calc(100vw-8rem)] items-center justify-center gap-2 whitespace-nowrap ${title}`}
+            className={`flex w-max max-w-[calc(100vw-8rem)] items-center justify-center gap-2 whitespace-nowrap sm:gap-2.5 md:gap-3 ${title}`}
           >
-            <span className="text-lg font-extrabold tracking-tight sm:text-xl">
-              {siteConfig.brandMushe}
+            {/* Misma disposición para ambas partes: tamaño, peso, mayúsculas, tracking */}
+            <span className="text-sm font-extrabold uppercase tracking-tight sm:text-base md:text-lg">
+              {siteConfig.brandPrimary}
             </span>
             <span
-              className={`select-none text-lg font-light leading-none sm:text-xl ${pipe}`}
+              className={`select-none px-0.5 text-sm font-light leading-none sm:text-base md:text-lg ${pipe}`}
               aria-hidden
             >
               |
             </span>
-            <span className="text-base font-bold uppercase tracking-[0.14em] sm:text-lg">
-              {siteConfig.brandTrading}
+            <span className="text-sm font-extrabold uppercase tracking-tight sm:text-base md:text-lg">
+              {siteConfig.brandSecondary}
             </span>
           </div>
 

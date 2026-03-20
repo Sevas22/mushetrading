@@ -1,10 +1,10 @@
 # Analytics y píxeles (GTM)
 
-El sitio carga **Google Tag Manager** con el ID configurado en `NEXT_PUBLIC_GTM_ID` (por defecto `GTM-M55CQZNG`).
+El sitio carga **Google Tag Manager** con el ID configurado en `NEXT_PUBLIC_GTM_ID` (por defecto `GTM-5NZXJ7NZ`).
 
 ## Google Analytics 4 (GA4)
 
-1. En [Google Tag Manager](https://tagmanager.google.com/), abre el contenedor `GTM-M55CQZNG`.
+1. En [Google Tag Manager](https://tagmanager.google.com/), abre el contenedor `GTM-5NZXJ7NZ`.
 2. **Tags → New → Google Analytics: GA4 Configuration** (o **GA4 Event** según necesites).
 3. Introduce tu **Measurement ID** (`G-XXXXXXXXXX`) de GA4.
 4. **Trigger**: *All Pages* (o el que corresponda).
@@ -24,7 +24,7 @@ No hace falta añadir `gtag.js` a mano en el código si todo va por GTM.
 Copia `.env.example` a `.env.local` y ajusta si usas otro contenedor:
 
 ```env
-NEXT_PUBLIC_GTM_ID=GTM-M55CQZNG
+NEXT_PUBLIC_GTM_ID=GTM-5NZXJ7NZ
 ```
 
 ## Verificación
